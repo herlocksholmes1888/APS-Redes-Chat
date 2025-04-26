@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./chat.css">
     <title>Ecomunications | Chat </title>
 </head>
 <body>
@@ -10,35 +14,43 @@
     <div class="container-destinatario">
         <div class="informacoes-destinatario">
             <div class="foto-destinatario">
-                <img src="">
+                <img id="foto" src="./img/add-picture.png" alt="Foto do destinatário">
             </div>
 
-            <div class="nome-destinatario">
-                <h2>José da Silva</h2>
-            </div>
+            <div class="dados-escritos-destinatario">
+                <div class="nome-destinatario">
+                    <h2>José da Silva</h2>
+                </div>
 
-            <div class="status-destinatario">
-                <p>Online</p>
+                <div class="status-destinatario">
+                    <p>Online</p>
+                </div>
             </div>
         </div>
     </div>
     
     <!-- A quantidade de mensagens deve ser dinâmica no futuro. Deve haver um template através do qual todas as mensagens são tratadas e, então, são mostradas na tela dentro desses templates -->
-     <div class="container-mensagens-remetente">
-        <div class="mensagem">
-            <p>Oi, tudo bem?</p>
+    <div class="chat">
+        <div class="container-mensagens-remetente">
+            <div class="speech-bubble-remetente">
+                <div class="mensagem">
+                    <p>Oi, tudo bem?</p>
+                </div>
+            </div>
         </div>
-     </div>
 
-     <div class="container-mensagens-destinatario">
-        <div class="mensagem">
-            <p>Tudo, e você?</p>
+        <div class="container-mensagens-destinatario">
+            <div class="speech-bubble-destinatario">
+                <div class="mensagem">
+                    <p>Tudo, e você?</p>
+                </div>
+            </div>
         </div>
-     </div>
+    </div>
 
-     <div class="teclado">
-        <input type="text" placeholder="Escreva alguma coisa...">
+    <div class="teclado">
+        <textarea placeholder="Escreva alguma coisa..."></textarea>
         <button type="submit">Enviar</button>
-     </div>
+    </div>
 </body>
 </html>

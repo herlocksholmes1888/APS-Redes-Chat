@@ -1,0 +1,103 @@
+/* PALETA DE CORES */
+:root {
+    --roxo: #56008c;
+    --roxo-clarinho: #bf00ff;
+    --roxo-rosinha: #dda0dd;
+    --azul-arroxeado: #6200ee;
+    --azul-arroxeado-escuro: #3700b3;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* HEADER */
+.container-destinatario {
+    background-color: var(--roxo);
+}
+
+#foto {
+    float: left;
+    width: 90px;
+    height: 90px;
+    margin-right: 18px;
+    border-radius: 80%;
+}
+
+.informacoes-destinatario {
+    align-items: center;
+    padding: 1rem;
+    font-family: "Cal Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    overflow: hidden;
+}
+
+/* CHAT */
+.chat {
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.speech-bubble-remetente {
+    background-color: var(--roxo-clarinho);
+    color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    max-width: 30%;
+    margin-left: auto;
+    text-align: left;
+}
+
+.speech-bubble-destinatario {
+    background-color: var(--roxo-rosinha);
+    color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    max-width: 30%;
+    margin-right: auto;
+    text-align: right;
+}
+
+/* TECLADO */
+.teclado {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+    gap: 0.5rem; 
+    padding: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 0; /* Cola no final da página */
+    left: 0;
+}
+
+textarea {
+    width: 100%;
+    height: 15rem;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 0.75rem;
+    font-size: 1rem;
+    background-color: var(--azul-arroxeado);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 25rem;
+}
+
+button:hover {
+    background-color: var(--azul-arroxeado-escuro);
+}
