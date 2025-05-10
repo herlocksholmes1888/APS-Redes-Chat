@@ -11,15 +11,34 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden; /* Impede scroll da página, controlamos por .chat */
+    font-family: "Cal Sans", sans-serif;
 }
 
 body {
+    display: flex;
+    flex-direction: column;
     background-color: var(--roxo-escuro);
 }
 
 /* HEADER */
 .container-destinatario {
     background-color: var(--roxo);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    gap: 1rem;
 }
 
 #foto {
@@ -31,22 +50,25 @@ body {
 }
 
 .informacoes-destinatario {
+    display: flex;
     align-items: center;
     padding: 1rem;
-    font-family: "Cal Sans", sans-serif;
-    font-weight: 400;
-    font-style: normal;
     color: white;
     overflow: hidden;
 }
 
 /* CHAT */
 .chat {
-    padding: 2.5rem;
+    flex: 1;
+    margin-top: 90px; 
+    margin-bottom: 180px; 
+    padding: 1.5rem;
+    overflow-y: auto;
     display: flex;
     flex-direction: column;
 }
 
+/* BOLHAS DE MENSAGEM */
 .speech-bubble-remetente {
     background-color: var(--roxo-clarinho);
     color: white;
@@ -55,6 +77,7 @@ body {
     max-width: 30%;
     margin-left: auto;
     text-align: left;
+    margin-bottom: 0.5rem;
 }
 
 .speech-bubble-destinatario {
@@ -65,33 +88,34 @@ body {
     max-width: 30%;
     margin-right: auto;
     text-align: right;
+    margin-bottom: 0.5rem;
 }
 
 /* TECLADO */
 .teclado {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 180px;
     display: flex;
     flex-direction: column;
-    justify-self: center;
     align-items: center;
-    gap: 0.5rem; 
+    gap: 0.5rem;
     padding: 1rem;
-    width: 100%;
     box-sizing: border-box;
-    position: fixed;
-    bottom: 0; 
-    left: 0;
 }
 
 textarea {
     width: 100%;
-    height: 15rem;
+    height: 100px;
     padding: 0.75rem;
     font-size: 1rem;
     border: 1px solid #ccc;
     border-radius: 8px;
-    box-sizing: border-box;
     background-color: var(--azul-arroxeado);
     color: white;
+    resize: none;
 }
 
 button {
