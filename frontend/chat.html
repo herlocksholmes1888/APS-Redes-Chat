@@ -57,6 +57,7 @@
     const textarea = document.querySelector('textarea');
     const button = document.querySelector('button');
 
+    // Envio de novas mensagens
     button.addEventListener('click', () => {
         const message = textarea.value;
         if (message.trim() !== '') {
@@ -73,6 +74,16 @@
             `;
             chat.appendChild(newMessage);
             textarea.value = '';
+        }
+    });
+
+    // Envio de novas mensagens através do Enter
+    // Ainda é possível acrescentar um novo parágrafo se
+    // for utilizada a tecla Shift + Enter
+    textarea.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter' && !event.shiftKey) {
+            event.preventDefault();
+            button.click();
         }
     });
 </script>
