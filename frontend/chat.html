@@ -53,4 +53,27 @@
         <button type="submit">Enviar</button>
     </div>
 </body>
+<script>
+    const textarea = document.querySelector('textarea');
+    const button = document.querySelector('button');
+
+    button.addEventListener('click', () => {
+        const message = textarea.value;
+        if (message.trim() !== '') {
+            const chat = document.querySelector('.chat');
+            const newMessage = document.createElement('div');
+            newMessage.classList.add('container-mensagens-remetente');
+            newMessage.innerHTML = `
+                <div class="speech-bubble-remetente">
+                    <div class="mensagem">
+                        <p>${message}</p>
+                    </div>
+                </div>
+                <br>
+            `;
+            chat.appendChild(newMessage);
+            textarea.value = '';
+        }
+    });
+</script>
 </html>

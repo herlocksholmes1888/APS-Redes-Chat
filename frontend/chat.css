@@ -1,6 +1,7 @@
 /* PALETA DE CORES */
 :root {
     --roxo: #56008c;
+    --roxo-escuro: #4b204b;
     --roxo-clarinho: #bf00ff;
     --roxo-rosinha: #dda0dd;
     --azul-arroxeado: #6200ee;
@@ -10,6 +11,10 @@
 * {
     margin: 0;
     padding: 0;
+}
+
+body {
+    background-color: var(--roxo-escuro);
 }
 
 /* HEADER */
@@ -72,8 +77,8 @@
     padding: 1rem;
     width: 100%;
     box-sizing: border-box;
-    position: absolute;
-    bottom: 0; /* Cola no final da página */
+    position: fixed;
+    bottom: 0; 
     left: 0;
 }
 
@@ -85,6 +90,8 @@ textarea {
     border: 1px solid #ccc;
     border-radius: 8px;
     box-sizing: border-box;
+    background-color: var(--azul-arroxeado);
+    color: white;
 }
 
 button {
