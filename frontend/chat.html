@@ -15,7 +15,10 @@
     <div class="container-destinatario">
         <div class="informacoes-destinatario">
             <div class="foto-destinatario">
-                <img id="foto" src="./img/add-picture.png" alt="Foto do destinatário">
+                <label for="file-input">
+                    <img id="preview" src="./img/add-picture.png" alt="Foto do destinatário" style="cursor: pointer; width: 90px; height: 90px; border-radius: 50%;" />
+                </label>
+                <input id="file-input" type="file" accept="image/*" style="display: none;" />
             </div>
 
             <div class="dados-escritos-destinatario">
@@ -57,6 +60,22 @@
 <script>
     const textarea = document.querySelector('textarea');
     const button = document.querySelector('button');
+    const input = document.getElementById('file-input');
+    const preview = document.getElementById('preview');
+
+    // Permite que o usuário adicione uma nova imagem para o destinatário
+    input.addEventListener('change', (e) => {
+        const file = e.target.files[0];
+
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function(evt) {
+                preview.src = evt.target.result; 
+            };
+            reader.readAsDataURL(file);
+        }
+    });
+
 
     // Envio de novas mensagens
     button.addEventListener('click', () => {
